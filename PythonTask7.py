@@ -1,9 +1,10 @@
 
-def sort_comma_seperatedstring(sorted):
+def comma_string_to_list(function):
     def split(comma_seperated_string):
         list_of_words= list(comma_seperated_string.split(","))
-        return ",".join(sorted(list_of_words))
+        return ",".join(function(list_of_words))
     return split
 
-sortedwithstr=sort_comma_seperatedstring(sorted)
-print(sortedwithstr("without,hello,bag,world"))
+sorted=comma_string_to_list(sorted)
+if __name__ == '__main__':
+    print(sorted("without,hello,bag,world"))
