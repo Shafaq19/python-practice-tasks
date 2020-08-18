@@ -1,6 +1,6 @@
-from PythonTask1 import Summ
+from Pythontasks.PythonTask1 import Summ
 from time import time_ns
-from PythonTask12 import remove_url
+from Pythontasks.PythonTask12 import remove_url
 
 def time_the_function(function):
     def timer(*args, **kwargs):
