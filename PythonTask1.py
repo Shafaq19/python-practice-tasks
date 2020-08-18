@@ -6,5 +6,6 @@ def Summ(num1,num2):
     :return:
     """
     return num1+num2
-a,b=10,20
-print("sum of %d and %d is %d"%(a,b,Summ(a,b)))
+if __name__ == '__main__':
+    a,b=10,20
+    print("sum of %d and %d is %d"%(a,b,Summ(a,b)))
