@@ -6,5 +6,6 @@ def remove_parenthesis(words):
     return words_without_braces
 
 
-words = ["example (.com))", "w3resource", "github (.com)", "stackoverflow (.com)"]
-print("\n".join(remove_parenthesis(words)))
+if __name__ == '__main__':
+    words = ["example (.com))", "w3resource", "github (.com)", "stackoverflow (.com)"]
+    print("\n".join(remove_parenthesis(words)))

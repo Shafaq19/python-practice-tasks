@@ -1,4 +1,7 @@
 class SingletonFactory:
+    '''
+    turns every class in to singleton
+    '''
     minstances = {}
 
     def __init__(self, class_type):

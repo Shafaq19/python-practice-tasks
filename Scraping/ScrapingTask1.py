@@ -1,17 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 
-from Scraping.IntroToScraping import Proxyfactory
 
-mproxy = Proxyfactory()
-proxies_pool, headers_pool = mproxy.create_pools()
-current_proxy = next(proxies_pool)
-current_headers = next(headers_pool)
-
-# Introduce the proxy and headers in the GET request
 with requests.Session() as req:
+    #get the website content
     page = req.get("http://www.nytimes.com/")
+
+    #parsing using article css
     soup = BeautifulSoup(page.text, 'html.parser')
-    headlines = soup.find_all("h2", {"class": "css-z9cw67 e1voiwgp0"})
+    headlines= soup.select(".e1voiwgp0")
+    #headlines = soup.find_all("h2", {"class": "css-z9cw67 e1voiwgp0"})
+
+    #print the headlines
     for t in headlines:
         print(t.text)

@@ -10,10 +10,12 @@ def time_the_function(function):
 
     return timer
 
+if __name__ == '__main__':
+    #test functions to time
+    Summ = time_the_function(Summ)
+    remove_url = time_the_function( remove_url)
+    sorted = time_the_function(sorted)
 
-Summ = time_the_function(Summ)
-remove_url = time_the_function( remove_url)
-sorted = time_the_function(sorted)
-sorted([6, 4, 2, 9, 8])
-remove_url("My Profile: https://auth.geeksforgeeks.org/user/Chinmoy%20Lenka/articles in the portal of http://www.geeksforgeeks.org")
-Summ(1, 2)
+    sorted([6, 4, 2, 9, 8])
+    remove_url("My Profile: https://auth.geeksforgeeks.org/user/Chinmoy%20Lenka/articles in the portal of http://www.geeksforgeeks.org")
+    Summ(1, 2)
